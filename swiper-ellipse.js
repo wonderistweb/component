@@ -8,7 +8,7 @@ $(function() {
     }
 
     var swiper = new Swiper('[data-swiper=lectures]', {
-      speed: 800,
+      speed: 600,
       loop: true,
       loopedSlides: slideTotal,
       navigation: {
@@ -33,7 +33,7 @@ $(function() {
     }
 
     swiper.on('transitionEnd', function() {
-      setTimeout(animSlide, 800);
+      setTimeout(animSlide, 600);
       $(`.swiper-slide:not(:eq(${swiper.activeIndex}))`).find('[data-lectures=anim2]').removeClass('active');
       $(`.swiper-slide:eq(${swiper.activeIndex})`).find('[data-lectures=anim2]').addClass('active');
     });
